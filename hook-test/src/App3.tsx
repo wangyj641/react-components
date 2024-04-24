@@ -1,3 +1,4 @@
+import { produce } from 'immer';
 import { useState, useEffect } from 'react';
 
 async function queryData() {
@@ -11,26 +12,22 @@ async function queryData() {
 
 function App() {
   console.log('-------------- comp --------------');
-  const [num, setNum] = useState(1);
-
-  useEffect(() => {
-    console.log('-------------- effect --------------');
-    // queryData().then(data => {
-    //   setNum(data);
-    // })
-
-    const timer = setInterval(() => {
-      console.log(num);
-    }, 1000);
-
-    return () => {
-      console.log('clean up');
-      clearInterval(timer);
-    }
-  }, [num]);
+  const [obj, setObj] = useState({
+    a: {
+      c: {
+        e: 0,
+        f: 0
+      },
+      d: 0
+    },
+    b: 0
+  });
 
   return (
-    <div onClick={() => setNum(num + 1)}>{num}</div>
+    <div onClick={() => {
+      setObj(produce(obj, (obj) => { obj.a.c.e++; }))
+    }}>
+      {JSON.stringify(obj)}</div>
   );
 }
 
