@@ -27,10 +27,25 @@
     &-cell {
       flex: 1;
       border: 1px solid #eee;
-      padding: 10px;
       color: #ccc;
+      overflow: hidden;
       &-current {
         color: #000;
+      }
+
+      &-date {
+        padding: 10px;
+
+        &-selected {
+          background: blue;
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          color: #fff;
+          border-radius: 50%;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -38,50 +53,51 @@
 
 .calendar-header {
   &-left {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
 
-      height: 28px;
-      line-height: 28px;
+    height: 28px;
+    line-height: 28px;
   }
 
   &-value {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   &-btn {
-      background: #eee;
-      cursor: pointer;
-      border: 0;
-      padding: 0 15px;
-      line-height: 28px;
+    background: #eee;
+    cursor: pointer;
+    border: 0;
+    padding: 0 15px;
+    line-height: 28px;
 
-      &:hover {
-          background: #ccc;
-      }
+    &:hover {
+      background: #ccc;
+    }
   }
 
   &-icon {
-      width: 28px;
-      height: 28px;
+    width: 28px;
+    height: 28px;
 
-      line-height: 28px;
-  
-      border-radius: 50%;
-      text-align: center;
-      font-size: 12px;
+    line-height: 28px;
 
-      user-select: none;
-      cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
 
-      margin-right: 12px;
-      &:not(:first-child) {
-          margin: 0 12px;
-      }
+    user-select: none;
+    cursor: pointer;
 
-      &:hover {
-          background: #ccc;
-      }
+    margin-right: 12px;
+
+    &:not(:first-child) {
+      margin: 0 12px;
+    }
+
+    &:hover {
+      background: #ccc;
+    }
   }
 
 }
