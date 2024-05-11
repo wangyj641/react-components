@@ -1,2 +1,2 @@
-# react-samples
-samples of react.js
+# react-components
+Components based on React
