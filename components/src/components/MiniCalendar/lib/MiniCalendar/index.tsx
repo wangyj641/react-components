@@ -6,7 +6,7 @@ interface CalendarProps {
   onChange?: (date: Date) => void;
 }
 
-interface CalendarRef {
+export interface CalendarRef {
   getDate: () => Date;
   setDate: (date: Date) => void;
 }
@@ -139,24 +139,4 @@ const InternalCalendar: React.ForwardRefRenderFunction<
 
 const Calendar = React.forwardRef(InternalCalendar);
 
-function Test() {
-  const calendarRef = useRef<CalendarRef>(null);
-
-  useEffect(() => {
-    console.log(calendarRef.current?.getDate().toLocaleDateString());
-
-    setTimeout(() => {
-      calendarRef.current?.setDate(new Date(2024, 3, 1));
-    }, 3000);
-  }, []);
-
-  return (
-    <div>
-      {/* <Calendar value={new Date('2023-3-1')} onChange={(date: Date) => {
-        alert(date.toLocaleDateString());
-    }}></Calendar> */}
-      <Calendar ref={calendarRef} value={new Date("2024-8-15")}></Calendar>
-    </div>
-  );
-}
-export default Test;
+export default Calendar;

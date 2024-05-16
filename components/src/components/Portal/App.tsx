@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import Portal from '../lib/Portal';
+import Portal from './lib/Portal';
 
 function App() {
   const containerRef = useRef<HTMLElement>(null);
