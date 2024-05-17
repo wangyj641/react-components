@@ -1,6 +1,6 @@
+import Space from './lib/Space';
+import { ConfigProvider } from './lib/Space/ConfigProvider';
 import './App.css';
-import Space from './Space';
-import { ConfigProvider } from './Space/ConfigProvider';
 
 export default function App() {
   return <div>

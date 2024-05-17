@@ -1,4 +1,4 @@
-import Watermark from "./Watermark";
+import Watermark from "./lib/Watermark";
 
 const App = () => {
   return <Watermark
