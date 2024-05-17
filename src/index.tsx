@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom/client';
 //import App from './components/MiniCalendar/App';
 //import App from './components/Space/App';
 //import App from './components/Watermark/App';
-import App from './components/MutateObserver/App';
+//import App from './components/MutateObserver/App';
+import App from './components/CopyToClipboard/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.12"
+    "@types/lodash-es": "^4.17.12",
+    "copy-to-clipboard": "^3.3.3"
   }
 }

@@ -5,7 +5,7 @@ function App() {
   const containerRef = useRef<HTMLElement>(null);
 
   const content = <div className="btn">
-    <button>按钮</button>
+    <button>button</button>
   </div>;
 
   useEffect(() => {
