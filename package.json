@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
-    "copy-to-clipboard": "^3.3.3"
+    "copy-to-clipboard": "^3.3.3",
+    "react-use": "^17.5.0"
   }
 }
