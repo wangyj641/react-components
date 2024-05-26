@@ -8,9 +8,10 @@ import ReactDOM from 'react-dom/client';
 //import App from './components/MutateObserver/App';
 //import App from './components/CopyToClipboard/App';
 //import App from './components/Message/App';
+import App from './components/Popover/App';
 
 //import App from './hooks/useMountedState/App';
-import App from './hooks/useSize/App';
+//import App from './hooks/useSize/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
