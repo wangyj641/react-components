@@ -10,6 +10,7 @@
     "@types/node": "^16.18.97",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "ahooks": "^3.8.0",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.11",
     "lodash-es": "^4.17.21",
