@@ -30,8 +30,14 @@ function ColorPickerPanel(props: ColorPickerProps) {
 
   const classNames = cs("color-picker", className);
 
+  function onPaletteColorChange(color: Color) {
+    setColorValue(color);
+    onChange?.(color);
+  }
+
   return <div className={classNames} style={style}>
-    <Palette color={colorValue}></Palette>
+    <Palette color={colorValue} onChange={onPaletteColorChange}></Palette>
+    <div style={{ width: 20, height: 20, background: colorValue.toRgbString() }}></div>
   </div>
 }
 

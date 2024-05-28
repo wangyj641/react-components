@@ -1,16 +1,46 @@
-import type { FC } from 'react';
+import { useRef, type FC } from 'react';
 import { Color } from './color';
 import Handler from './Handler';
+import Transform from './Transform';
+import useColorDrag from './useColorDrag';
+import { calculateColor, calculateOffset } from './util';
 
 const Palette: FC<{
-  color: Color
-}> = ({ color }) => {
-  return (
-    <div className="color-picker-panel-palette" >
-      <Handler color={color.toRgbString()} />
+  color: Color,
+  onChange?: (color: Color) => void;
+}> = ({ color, onChange }) => {
+  const transformRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
+  const [offset, dragStartHandle] = useColorDrag({
+    containerRef,
+    targetRef: transformRef,
+    color,
+    onDragChange: offsetValue => {
+      const newColor = calculateColor({
+        offset: offsetValue,
+        containerRef,
+        targetRef: transformRef,
+        color
+      });
+      onChange?.(newColor);
+    },
+    calculate: () => {
+      return calculateOffset(containerRef, transformRef, color)
+    }
+  });
+
+  return (
+    <div
+      ref={containerRef}
+      className="color-picker-panel-palette"
+      onMouseDown={dragStartHandle}
+    >
+      <Transform ref={transformRef} offset={{ x: offset.x, y: offset.y }}>
+        <Handler color={color.toRgbString()} />
+      </Transform>
       <div
-        className="color-picker-panel-palette-main"
+        className={`color-picker-panel-palette-main`}
         style={{
           backgroundColor: `hsl(${color.toHsl().h},100%, 50%)`,
           backgroundImage:
