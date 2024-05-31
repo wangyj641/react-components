@@ -1,9 +1,11 @@
 # React-components
 A react component lib including:
 - Calendar
+- ColorPicker
 - CopyToClipboard
 - Message
 - MutateObserver
+- OnBoarding
 - Popover
 - Portal
 - Space
