@@ -87,14 +87,14 @@ export const OnBoarding: FC<OnBoardingProps> = (props) => {
           <Button
             className={'back'}
             onClick={() => back()}>
-            {'上一步'}
+            {'Last step'}
           </Button>
         }
         <Button
           className={'forward'}
           type={'primary'}
           onClick={() => forward()}>
-          {currentStep === steps.length - 1 ? '我知道了' : '下一步'}
+          {currentStep === steps.length - 1 ? 'Got it' : 'Next step'}
         </Button>
       </div>
     );

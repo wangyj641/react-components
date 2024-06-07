@@ -10,7 +10,8 @@ import ReactDOM from 'react-dom/client';
 //import App from './components/Message/App';
 //import App from './components/Popover/App';
 //import App from './components/ColorPicker/App';
-import App from './components/OnBoarding/App';
+//import App from './components/OnBoarding/App';
+import App from './components/Upload/App';
 
 //import App from './hooks/useMountedState/App';
 //import App from './hooks/useSize/App';
