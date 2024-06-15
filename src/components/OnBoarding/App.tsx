@@ -1,7 +1,7 @@
 import { OnBoarding } from './lib/OnBoarding';
 import { Button, Flex } from 'antd';
 
-function App() {
+export default function OnBoardingApp() {
 
   return <div className='App'>
     <Flex gap="small" wrap="wrap" id="btn-group1">
@@ -79,5 +79,3 @@ function App() {
       } />
   </div>
 }
-
-export default App

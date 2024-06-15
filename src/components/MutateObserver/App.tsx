@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import MutateObserver from './lib/MutateObserver';
 
-export default function App() {
+export default function MutateObserverApp() {
   const [className, setClassName] = useState('aaa');
 
   useEffect(() => {

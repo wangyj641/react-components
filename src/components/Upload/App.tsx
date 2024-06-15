@@ -19,10 +19,10 @@ const props: UploadProps = {
   },
 };
 
-const App: React.FC = () => (
+const UploadApp: React.FC = () => (
   <Upload {...props}>
     <Button icon={<UploadOutlined />}>Click to Upload</Button>
   </Upload>
 );
 
-export default App;
+export default UploadApp;

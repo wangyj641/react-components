@@ -1,8 +1,7 @@
 import Space from './lib/Space';
 import { ConfigProvider } from './lib/Space/ConfigProvider';
-import './App.css';
 
-export default function App() {
+export default function SpaceApp() {
   return <div>
     <ConfigProvider space={{ size: 20 }}>
       <Space direction="horizontal">

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Portal from './lib/Portal';
 
-function App() {
+export default function PortalApp() {
   const containerRef = useRef<HTMLElement>(null);
 
   const content = <div className="btn">
@@ -16,5 +16,3 @@ function App() {
     {content}
   </Portal>
 }
-
-export default App;

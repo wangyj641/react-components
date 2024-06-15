@@ -1,6 +1,6 @@
 import { MessageProvider } from "./lib/Message";
 
-function App() {
+export default function MessageApp() {
   return (
     <div>
       <MessageProvider></MessageProvider>
@@ -8,4 +8,3 @@ function App() {
   );
 }
 
-export default App;

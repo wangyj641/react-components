@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import Calendar from './lib/Calendar';
 
-function App() {
+export default function CalendarApp() {
   return (
     <div className="App">
       <Calendar value={dayjs('2023-11-08')} onChange={(date) => {
@@ -10,5 +10,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

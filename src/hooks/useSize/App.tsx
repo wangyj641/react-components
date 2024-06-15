@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 //import { useSize } from 'ahooks';
 import useSize from './lib/useSize';
 
-const App = () => {
+const useSizeApp = () => {
   const ref = useRef<HTMLDivElement>(null);
   const size = useSize(ref);
   return (
@@ -15,4 +15,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default useSizeApp;

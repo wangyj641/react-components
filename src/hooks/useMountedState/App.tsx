@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useMountedState from './lib/useMountedState';
 
-const App = () => {
+const useMountedStateApp = () => {
   const isMounted = useMountedState();
   const [, setNum] = useState(0);
 
@@ -14,4 +14,4 @@ const App = () => {
   return <div>{isMounted() ? 'mounted' : 'pending'}</div>
 };
 
-export default App;
+export default useMountedStateApp;

@@ -1,6 +1,6 @@
 import Popover from "./lib/Popover";
 
-export default function App() {
+export default function PopoverApp() {
   const popoverContent = <div>
     This is a popover
     <button onClick={() => { alert(1) }}>close</button>

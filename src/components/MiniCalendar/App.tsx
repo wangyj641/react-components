@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import MiniCalendar, { CalendarRef } from './lib/MiniCalendar';
 
-function App() {
+export default function MiniCalendarApp() {
   const calendarRef = useRef<CalendarRef>(null);
 
   useEffect(() => {
@@ -21,5 +21,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
