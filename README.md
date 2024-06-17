@@ -4,11 +4,13 @@ A react component lib including:
 - ColorPicker
 - CopyToClipboard
 - Message
+- MiniCalendar
 - MutateObserver
 - OnBoarding
 - Popover
 - Portal
 - Space
+- Upload
 - Watermark
 
 It also implements some hooks, including:

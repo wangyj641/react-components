@@ -17,6 +17,8 @@ import WatermarkApp from './components/Watermark/App';
 import useMountedStateApp from './hooks/useMountedState/App';
 import useSizeApp from './hooks/useSize/App';
 
+import ZustandApp from './libs/Zustand/App';
+
 const components = [
   { name: 'Calendar', app: CalendarApp },
   { name: 'ColorPicker', app: ColorPickerApp },
@@ -37,19 +39,31 @@ const hooks = [
   { name: 'useSize', app: useSizeApp }
 ];
 
+const libs = [
+  { name: 'zustand', app: ZustandApp }
+];
+
 function ItemDetail() {
   const { name } = useParams();
   const path = JSON.stringify(useLocation().pathname);
   console.log(path);
 
-  let DynamicComponent = null;
+  let DynamicComponent = components[0].app;
 
-  if (path.startsWith('hooks', 2)) {
-    const index = hooks.findIndex(item => item.name === name);
-    DynamicComponent = hooks[index].app;
-  } else {
+  if (path.startsWith('components', 2)) {
     const index = components.findIndex(item => item.name === name);
     DynamicComponent = components[index].app;
+  }
+  else if (path.startsWith('hooks', 2)) {
+    const index = hooks.findIndex(item => item.name === name);
+    DynamicComponent = hooks[index].app;
+  }
+  else if (path.startsWith('libs', 2)) {
+    const index = libs.findIndex(item => item.name === name);
+    DynamicComponent = libs[index].app;
+  }
+  else {
+    console.error('Error');
   }
 
   return (
@@ -78,6 +92,14 @@ function Category() {
           </li>
         ))}
       </ul>
+      <h1>Libs</h1>
+      <ul>
+        {libs.map(item => (
+          <li key={item.name}>
+            <Link to={`/libs/${item.name}`}>{item.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -89,6 +111,7 @@ function App() {
         <Route path="/" element={<Category />} />
         <Route path="/components/:name" element={<ItemDetail />} />
         <Route path="/hooks/:name" element={<ItemDetail />} />
+        <Route path="/libs/:name" element={<ItemDetail />} />
       </Routes>
     </Router>
   );
