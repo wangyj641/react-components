@@ -13,6 +13,7 @@ import PortalApp from './components/Portal/App';
 import SpaceApp from './components/Space/App';
 import UploadApp from './components/Upload/App';
 import WatermarkApp from './components/Watermark/App';
+import ReactLazyloadApp from './components/ReactLazyload/App';
 
 import useMountedStateApp from './hooks/useMountedState/App';
 import useSizeApp from './hooks/useSize/App';
@@ -32,6 +33,7 @@ const components = [
   { name: 'Space', app: SpaceApp },
   { name: 'Upload', app: UploadApp },
   { name: 'Watermark', app: WatermarkApp },
+  { name: 'ReactLazyload', app: ReactLazyloadApp },
 ];
 
 const hooks = [
