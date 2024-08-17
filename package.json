@@ -6,6 +6,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "^4.1.0",
     "@floating-ui/react": "^0.26.16",
+    "@react-spring/web": "^9.7.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,6 +16,7 @@
     "@types/react-dom": "^18.3.0",
     "ahooks": "^3.8.0",
     "antd": "^5.17.4",
+    "async-validator": "^4.2.5",
     "axios": "^1.7.2",
     "classnames": "^2.5.1",
     "cors": "^2.8.5",

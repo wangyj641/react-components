@@ -14,6 +14,7 @@ import SpaceApp from './components/Space/App';
 import UploadApp from './components/Upload/App';
 import WatermarkApp from './components/Watermark/App';
 import ReactLazyloadApp from './components/ReactLazyload/App';
+import FormApp from './components/Form/App';
 
 import useMountedStateApp from './hooks/useMountedState/App';
 import useSizeApp from './hooks/useSize/App';
@@ -34,6 +35,7 @@ const components = [
   { name: 'Upload', app: UploadApp },
   { name: 'Watermark', app: WatermarkApp },
   { name: 'ReactLazyload', app: ReactLazyloadApp },
+  { name: 'Form', app: FormApp },
 ];
 
 const hooks = [
