@@ -36,20 +36,26 @@ const Item = (props: ItemProps) => {
     rules,
   } = props;
 
-  if (!name) {
-    return children;
-  }
-
   const [value, setValue] = useState<string | number | boolean>();
   const [error, setError] = useState('');
 
   const { onValueChange, values, validateRegister } = useContext(FormContext);
 
   useEffect(() => {
-    if (value !== values?.[name]) {
+    if (name && value !== values?.[name]) {
       setValue(values?.[name]);
     }
-  }, [values, values?.[name]])
+  }, [name, values])
+
+  useEffect(() => {
+    if (name) {
+      validateRegister?.(name, () => handleValidate(value));
+    }
+  }, [name, value]);
+
+  if (!name) {
+    return children ? children : null;
+  }
 
   const handleValidate = (value: any) => {
     let errorMsg = null;
@@ -79,10 +85,6 @@ const Item = (props: ItemProps) => {
 
     return errorMsg;
   }
-
-  useEffect(() => {
-    validateRegister?.(name, () => handleValidate(value));
-  }, [value]);
 
   const propsName: Record<string, any> = {};
   if (valuePropName) {

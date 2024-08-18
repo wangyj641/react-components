@@ -12,7 +12,7 @@ const FormApp: React.FC = () => {
 
   return (
     <Form
-      initialValues={{ remember: true, username: '神说要有光' }}
+      initialValues={{ remember: true, username: 'Yongjun Wang' }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
@@ -20,8 +20,8 @@ const FormApp: React.FC = () => {
         label="Username"
         name="username"
         rules={[
-          { required: true, message: '请输入用户名!' },
-          { max: 6, message: '长度不能大于 6' }
+          { required: true, message: 'Please input your name' },
+          { max: 6, message: 'Max length is 6' }
         ]}
       >
         <Input />
@@ -30,19 +30,19 @@ const FormApp: React.FC = () => {
       <Form.Item
         label="Password"
         name="password"
-        rules={[{ required: true, message: '请输入密码!' }]}
+        rules={[{ required: true, message: 'Please input your password' }]}
       >
         <Input.TextArea />
       </Form.Item>
 
       <Form.Item name="remember" valuePropName="checked">
-        <Checkbox>记住我</Checkbox>
+        <Checkbox>Save me</Checkbox>
       </Form.Item>
 
       <Form.Item>
         <div>
           <Button type="primary" htmlType="submit" >
-            登录
+            Login
           </Button>
         </div>
       </Form.Item>
