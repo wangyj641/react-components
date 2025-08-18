@@ -6,7 +6,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "^4.1.0",
     "@floating-ui/react": "^0.26.16",
-    "@react-spring/web": "^9.7.4",
+    "@react-spring/web": "^9.7.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
